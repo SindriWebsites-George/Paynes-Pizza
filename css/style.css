@@ -1,0 +1,314 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    /* Needs to be changed once iPad screen size is hit */
+    flex-direction: column;
+    /* word-wrap: break-word; */
+}
+
+:root {
+    /* In main css file, main-color is main-bg-color */
+    --content-height: 95%;
+    --main-color: #0A710A;
+    --alt-color: #EAE9EB;
+}
+
+main {
+    margin: 10px;
+}
+
+#desktop {
+    display: none;
+}
+
+
+/* Start of iPhone 5 like design*/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--main-color);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.tabLinks {
+    border: none;
+    padding: none;
+    background-color: var(--main-color);
+    font-size: 22px;
+    color: white;
+}
+
+#jumbotron {
+    background-color: var(--alt-color);
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: inset 0px 1px 14px 5px rgba(0, 0, 0, 0.24);
+    box-shadow: inset 0px 1px 14px 5px rgba(0, 0, 0, 0.24);
+}
+
+#hourContainer {
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logo {
+    width: 320px;
+    height: 250px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+/* The accordion class must be kept above the hourButton, and eventAccordion classes, as the hourButton is a child of the accordion class */
+
+.accordion,
+.accordionMenu {
+    border: none;
+    padding: none;
+    background-image: none;
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    text-align: left;
+    padding-left: .5em;
+    background-color: inherit;
+    border-left: 5px solid var(--main-color);
+    transition: .3s;
+    font-size: 22px;
+}
+
+.eventAccordion {
+    margin-top: 1em;
+    margin-bottom: 0em;
+    display: block;
+}
+
+#home {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.articleTitle {
+    font-size: 22px;
+    border-bottom: 1px solid gray;
+    margin-top: 1em;
+}
+
+.imgContainer {
+    background-image: url("../imgs/sandwichtray.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 12em;
+    color: white;
+    margin-top: 1em;
+    font-size: 22px;
+}
+
+.imgBG {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.borderBox {
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 1px rgba(79, 79, 79, 0.64) solid;
+    box-shadow: 10px 12px 4px -4px rgba(79, 79, 79, 0.64);
+}
+
+footer {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.panel {
+    display: none;
+    padding-left: 2em;
+    margin-right: 1em;
+}
+
+#buttonOrder {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40%;
+    justify-content: space-evenly;
+}
+
+.onlineOrder {
+    box-shadow: 3px 4px 0px 0px #3e7327;
+    background-color: #77b55a;
+    border-radius: 18px;
+    border: 1px solid #4b8f29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 9px 10px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #5b8a3c;
+    margin-right: 2em;
+}
+
+.onlineOrder:hover {
+    background-color: #72b352;
+}
+
+
+/* .onlineOrder:active {
+    position: relative;
+    top: 1px;
+} */
+
+@media only screen and (min-width: 768px) {
+    #jumbotron {
+        flex-direction: row;
+        justify-content: space-around;
+        /* width: 90%; */
+    }
+    /* nav {
+        width: 90%;
+    } */
+    #logo {
+        flex-basis: 47%;
+    }
+    #home {
+        padding: none;
+        justify-content: space-evenly;
+    }
+    #hourContainer {
+        margin-top: 10%;
+        flex-basis: 47%;
+    }
+    #home {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #orderMarion,
+    #orderDelaware {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        flex-basis: 49%;
+    }
+    .container {
+        flex-basis: 49%;
+    }
+    .firstRowDelawareMenu {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .borderBox {
+        width: 40%;
+        flex-basis: 50%;
+    }
+    .borderBox {
+        width: 40%;
+        flex-basis: 50%;
+    }
+    /* .imgHolder {
+        flex-flow: wrap;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    } */
+    /* .imgHolder {
+        flex-basis: 49%;
+    } */
+    .imgContainer {
+        width: 100%;
+        height: 6.9%;
+    }
+    .imgBG {
+        width: 100%;
+    }
+    .articleContent__tablet {
+        flex-basis: 45%;
+        padding-top: 1em;
+        padding-right: 1em;
+        width: 85%
+    }
+    .articleTitle {
+        width: 49%;
+    }
+    .footerTablet {
+        width: 40%;
+    }
+    /* TODO Add two column layout */
+}
+
+@media only screen and (min-width: 1000px) {
+    #jumbotron {
+        flex-direction: column;
+        flex-basis: 20%;
+    }
+    #hourContainer {
+        margin-top: none;
+    }
+    /* nav#mobile {
+        display: none;
+    }
+    #desktop {
+        display: block;
+    } */
+    #siteContainer {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: nowrap;
+    }
+    #home {
+        flex-basis: 70%;
+    }
+    #orderMarion,
+    #orderDelaware {
+        flex-basis: 70%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #hourButton {
+        margin-top: 1em;
+    }
+    nav#desktop {
+        width: 100%;
+    }
+    #logo {
+        width: 22em;
+        height: 22em;
+        margin-top: none;
+        margin-bottom: none;
+        padding: none;
+    }
+    #mobile {
+        display: none;
+    }
+    #desktop {
+        display: flex;
+    }
+    .desktopContainer {
+        display: flex;
+    }
+    #home,
+    #orderMarion,
+    #orderDelaware {
+        flex-basis: 70%;
+        width: 1000px;
+    }
+    #desktopContainer {
+        width: 100%;
+    }
+    .container {
+        flex-basis: 33%;
+    }
+    .imgContainer {
+        margin-top: none;
+    }
+}
