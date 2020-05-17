@@ -68,7 +68,7 @@ var j;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-        console.log("I was also clicked!");
+        console.log("I was clicked!");
 
         // Removing any active tags
         if ($(this).hasClass("active")) {
